@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+<html>
+    <p>School records</p>
+    <p>{{school_records}}</p>
+	
+	
+	{% for school_record in school_records %}
+		{{ school_record }}
+		<h1><a href="">"{% url 'matric_detail' pk=school_record.pk %}"></a>{{school_record.name}}</h1>
+	{% endfor %}
+</html>

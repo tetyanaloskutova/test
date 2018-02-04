@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class SchoolRecord(models.Model):
 	emis = models.CharField(max_length=9)
-	centre_no = models.CharField(max_length=7)
+	centre_no = models.CharField(max_length=7, primary_key=True)
 	name = models.CharField(max_length=256)
 	# for future, it's better to link to Result class, e.g. Result(year, wrote, pass)
 	wrote_2014 = models.PositiveIntegerField(default=0)
