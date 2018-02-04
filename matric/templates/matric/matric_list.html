@@ -8,12 +8,12 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Matric School Records</a></h1>
+            <h1><a href="/matric/">Matric School Records</a></h1>
         </div>
 
         	{% for school_record in school_records %}
 		{{ school_record }}
-			<h1><a href="">"{% url 'matric_detail' pk=school_record.pk %}"></a>{{school_record.name}}</h1>
+			<h1><a href="{% url 'matric_detail' school_record.pk  %}">{{school_record.name}}</a></h1>
 		{% endfor %}
 
     </body>
