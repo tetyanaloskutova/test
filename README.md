@@ -4,4 +4,4 @@
 
 ##[Matric_Analysis.ipynb](Matric_Analysis.ipynb):
 - contains data loading scipt
-- shows some basic analysis
+- shows some basic analysis (A Cheat Version of Objective 5 )
