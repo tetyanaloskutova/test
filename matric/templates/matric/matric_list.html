@@ -1,12 +1,20 @@
-{% extends 'blog/base.html' %}
-
+{% load staticfiles %}
 <html>
-    <p>School records</p>
-    <p>{{school_records}}</p>
-	
-	
-	{% for school_record in school_records %}
+    <head>
+        <title>School Records</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/matric.css' %}">
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Matric School Records</a></h1>
+        </div>
+
+        	{% for school_record in school_records %}
 		{{ school_record }}
-		<h1><a href="">"{% url 'matric_detail' pk=school_record.pk %}"></a>{{school_record.name}}</h1>
-	{% endfor %}
+			<h1><a href="">"{% url 'matric_detail' pk=school_record.pk %}"></a>{{school_record.name}}</h1>
+		{% endfor %}
+
+    </body>
 </html>
